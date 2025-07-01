@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bill Splitter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+  <div class="container">
+    <h1>Bill Splitter</h1>
+    <button id="toggle-theme" title="Toggle Theme">Light</button>
+
+    <label for="amount">Bill Amount</label>
+    <input type="number" id="amount" value="100.00" />
+
+    <label for="tip">Tip (%)</label>
+    <input type="number" id="tip" value="10" />
+
+    <label for="people">Number of People</label>
+    <select id="people">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <label>Payment Mode</label>
+    <div class="payment-options">
+      <label><input type="radio" name="payment" value="Cash" checked /> Cash</label>
+      <label><input type="radio" name="payment" value="Card" /> Card</label>
+      <label><input type="radio" name="payment" value="UPI" /> UPI</label>
+    </div>
+
+    <button id="calculate">Calculate</button>
+
+    <div class="output">
+      <p>Tip Amount: <span id="tip-amount">₹0.00</span></p>
+      <p>Amount Per Person: <span id="per-person">₹0.00</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
